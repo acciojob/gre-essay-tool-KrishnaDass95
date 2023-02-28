@@ -5,9 +5,8 @@ const outputH3 = document.getElementById('wordCount');
 
 function countWords(e){
 	let sentence = e.target.value;
-	let words = sentence.split(' ');
-	let n = words.length;
-	outputH3.textContent = n;
+	let count = sentence.match(/\S+/gi).length;
+	outputH3.textContent = count;
 }
 
 inputField.addEventListener('input', countWords)
