@@ -1,12 +1,13 @@
 // lets get both the text field and the output
-let inputField = document.getElementById('evaluatedText').value;
+let inputField = document.getElementById('evaluatedText');
 const outputH3 = document.getElementById('wordCount');
 
 
 function countWords(e){
-	alert(e.target.value);
-	// string s = inputField.split(' ');
-	// return s.length;
+	let sentence = e.target.value;
+	let words = sentence.split(' ');
+	let n = words.length - 1;
+	outputH3.textContent = n;
 }
 
 inputField.addEventListener('input', countWords)
